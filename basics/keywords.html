@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Java Reference</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/navbar.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/table.css">    
+</head>
+<body>
+	<div class="navbar">
+        <a class="brand">Java Ref</a>
+        <a href="../about.html">About</a>
+		<div class="dropdown">
+			<button class="dropbtn">Basics</button>
+			<div class="dropdown-content">
+				<a href="../basics/keywords.html">Keywords</a>
+				<a href="../basics/controlflow.html">Control Flow</a>
+            </div>
+		</div>
+    </div>
+    <div class="content">
+        <h1>Keywords</h1>
+        <p>A Keyword is a reserved word which has a special meaning and can´t be used in variable names.</p>
+        <table>
+            <tr>
+                <th>Keyword</th>
+                <th>Explanation</th>
+            </tr>
+
+            <tr class="section"><td colspan="2">Control Flow</td></tr>
+            <tr>
+                <td><span class="kw">if</span></td>
+                <td>Checks wether a boolean expression is true and, if it is, executes the following code block or instruction.</td>
+            </tr>
+            <tr>
+                <td><span class="kw">else</span></td>
+                <td>Must follow an if and, if the preceding if didn´t execute its code block, executes the following code block or instruction.</td>
+            </tr>
+            <tr>
+                <td><span class="kw">for</span></td>
+                <td>Executes a given instruction and executes the following code block or instruction while a given boolean expression is true, executing another given instruction each time.</td>
+            </tr>
+            <tr>
+                <td><span class="kw">while</span></td>
+                <td>Executes the following code block or instruction while a given boolean expression evaluates to true. Checks the expression before execution.</td>
+            </tr>
+            <tr>
+                <td><span class="kw">do</span></td>
+                <td>Must be followed by a code block and a while. 
+                    Executes the code block while the expression specified in the while is true. Checks the expression after execution.</td>
+            </tr>
+            <tr>
+                <td><span class="kw">switch</span></td>
+                <td>Must be followed by a code block containing <i>cases</i>. 
+                    Executes the case matching a given <i>case</i> or, 
+                    if no matching <i>case</i> is found, the <i>default case</i>.</td>
+            </tr>
+            <tr>
+                <td><span class="kw">case</span></td>
+                <td>Specifies a case inside a switch.</td>
+            </tr>
+            <tr>
+                <td><span class="kw">default</span> [case]</td>
+                <td>Specifies the case that is executed if no other case matches. Optional.</td>
+            </tr>
+            <tr>
+                <td><span class="kw">break</span></td>
+                <td>Breaks out of a for loop, while loop or switch case.</td>
+            </tr>
+
+            <tr class="section"><td colspan="2">Exceptions</td></tr>
+            <tr>
+                <td><span class="kw">throw</span></td>
+                <td>Throws an exception of type or subclass of <i>Throwable.</i></td>
+            </tr>            
+            <tr>
+                <td><span class="kw">throws</span></td>
+                <td>Indicates that a method could throw a given type of exception.</td>
+            </tr>
+            <tr>
+                <td><span class="kw">try</span></td>
+                <td>Must be followed by one or more <i>catch</i> blocks and/or a single <i>finally</i> block.
+                Executes the following code block or instruction.</td>
+            </tr>
+            <tr>
+                <td><span class="kw">catch</span></td>
+                <td>Is executed if an exception is generated inside the preceding try block and the type matches a given type.
+                    Prevents the Exception from being passed up the callstack. Exceptions inside the catch block behave like any other exception.
+                </td>
+            </tr>
+            <tr>
+                <td><span class="kw">finally</span></td>
+                <td>Executes after the preceding try block and catch blocks, independently of wether an exception was thrown inside the try block.
+                    Executes even if the method returns inside the try block.
+                </td>
+            </tr>
+
+            <tr class="section"><td colspan="2">Type Definition</td></tr>
+            <tr>
+                <td><span class="kw">class</span></td>
+                <td>Defines a class. Defaults: private, </td>
+            </tr>
+            <tr>
+                <td><span class="kw">enum</span></td>
+                <td>Defines an enum, which is a special type of class. 
+                    Can be nested inside classes.</td>
+            </tr>
+            
+
+            <tr class="section"><td colspan="2">Inheritance</td></tr>
+            <tr>
+                <td><span class="kw">abstract</span> [class]</td>
+                <td>Indicates that a class can´t be instantiated. Often contains abstract methods. Subclasses typically implement all abstract methods and are not abstract, otherwise they must be declared abstract.</td>
+            </tr>
+            <tr>
+                <td><span class="kw">abstract</span> [method]</td>
+                <td>Marks methods that aren´t implemented. Abstract methods drop the curly brackets. A class containing abstract methods must itself be abstract.</td>
+            </tr>
+            <tr>
+                <td><span class="kw">final</span> [class]</td>
+                <td>Indicates that a class can´t be inherited.</td>
+            </tr>
+            <tr>
+                <td><span class="kw">final</span> [method]</td>
+                <td>Indicates that a method can´t be overwritten.</td>
+            </tr>
+            <tr>
+                <td><span class="kw">extends</span></td>
+                <td>Indicates that a class extends (inherits) another class.</td>
+            </tr>
+
+            <tr class="section"><td colspan="2">Access</td></tr>
+            <tr>
+                <td><span class="kw">public</span></td>
+                <td>Indicates that the class, attribute or method is accessible by any other class.</td>
+            </tr>
+            <tr>
+                <td>default</td>
+                <td>The default is that a class, attribute or method is accessible by any other class in the same <i>package</i>.</td>
+            </tr>
+            <tr>
+                <td><span class="kw">private</span></td>
+                <td>Indicates that an attribute or method is only accessible within the containing class.</td>
+            </tr>
+            <tr>
+                <td><span class="kw">protected</span></td>
+                <td>Indicates that an attribute is accessible by classes in the same package <i>and subclasses</i></td>
+            </tr>
+            <tr>
+                <td><span class="kw">static</span></td>
+                <td>Indicates that a method or attribute doesn´t need an object of the containing class to be called or modified.</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

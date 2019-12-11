@@ -1,0 +1,97 @@
+:root{
+    --gray: rgb(82, 82, 82);
+    --blue: #008bcc;
+}
+
+* {
+    font: 400 13.3333px Arial;
+}
+
+i {
+    font-style: italic !important;
+}
+
+h1 {
+    text-align: center;
+    font-size: 25px
+}
+
+h2 {
+    text-align: left;
+    font-size: 20px;
+    margin: 10px;
+    color: var(--blue);
+}
+
+.content {
+    padding: 30px 10%;
+}
+
+pre.code{
+    display: block;
+    font-family: "Lucida Console", Monaco, monospace !important;
+    text-align: left;
+    font-size: 14px;
+    border: 2px var(--gray) solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0px;
+    margin-left: 7%;
+    margin-top: 1em;
+    background-color: rgb(255, 255, 204);
+}
+
+p {
+    font-size: 15px;
+    width: 75%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.left {
+    text-align: left;
+    width: 100%;
+}
+
+p.subtext {
+    margin-left: 8%;
+    margin-top: 4px;
+    font-style: italic;
+    font-size: 14px;
+    text-align: left;
+}
+
+span.kw {
+    font-style: italic;
+    font-size: inherit;
+    color: #cf7900;
+}
+
+pre.code span.kw {
+    color: #ff7300;
+}
+
+span.kw.blue{
+    color: var(--blue);
+}
+
+pre.code span.kw.blue{
+    color: #038cfc;
+}
+
+span.kw.red{
+    color: #cf0000;
+}
+
+pre.code span.kw.red{
+    color: #ff0000;
+}
+
+span.kw.purple{
+    color: #c800cf;
+}
+
+pre.code span.kw.purple{
+    color: #f700ff;
+}
