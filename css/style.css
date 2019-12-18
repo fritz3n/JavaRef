@@ -3,6 +3,74 @@
     --blue: #008bcc;
 }
 
+.item-container{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 10px;
+}
+
+.item-div{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    background-repeat: none;
+    position: relative;
+}
+
+.item-div:hover .item-image {
+    filter: brightness(50%);
+}
+.item-image {
+    width: 100%;
+    height: auto;
+    filter: brightness(100%);
+    transition: filter 500ms;
+}
+
+.item-div:hover .item-description {
+    height: 50%;
+}
+.item-description {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 0;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 30px 30px 0 0;
+    transition: height 500ms;
+    text-align: center;
+}
+.item-description:first-child
+
+.item-div:hover .item-title {
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius:  0 ;
+    color: white;
+}
+.item-title {
+    position: absolute;
+    left: 25%;
+    width: 45%;
+    height: 10%;
+    top: 50%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    color: rgb(200, 200, 200);
+
+    transition: all 500ms;
+
+    font-size: 20px;
+
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+}
+
 * {
     font: 400 13.3333px Arial;
 }

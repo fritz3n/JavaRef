@@ -30,6 +30,7 @@ body {
 .navbar:hover .navdropdown{
     transform: scaleY(1);
 }
+
 .backgroundcontainer {
     background-color: rgb(36, 36, 36);
     width: 100%;
@@ -37,7 +38,7 @@ body {
 }
 
 .navcontainer {
-    width: fit-content;
+    width: min-content;
     height: 100%;
     margin: 0 auto;
     padding-top: 10px;
@@ -78,9 +79,10 @@ body {
 }
 
 .dropdown{
-    float: right;
     background-color: inherit;
     overflow: hidden;
+    display: inline-block;
+    width: min-content;
 }
 
 .dropdown .dropbtn{
@@ -99,7 +101,7 @@ body {
     position: absolute;
     z-index: 1;
     background-color: inherit;
-    /*min-width: 160px;*/
+    max-width: 100px;
     transform: scaleY(0);    
     transform-origin: top;
     transition: transform 0.5s;
