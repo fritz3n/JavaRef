@@ -9,15 +9,19 @@
         <link rel="stylesheet" type="text/css" media="screen" href="style.css">
     </head>
     <body>
-        <?php include("../../../source/navbar.html") ?>
+        <?php include("../../source/navbar.html") ?>
         <div class="content">
             <div class="item-container">
                 <div class="item-div">
-                    <img class="item-image" src="assets/haribo/haribo1.jpg" />
+                    <div class="item-imageContainer">
+                        <img class="item-image" src="assets/haribo/haribo1.jpg" />
+                    </div>
+                    <button class="item-closeButton" onclick="contract(this.parentElement)">x</button>
                     <div class="item-title">Haribo 600g</div>
                     <div class="item-description">
-                        <p>Feinste Haribo Gummibären</p>
+                        <p class="bold">Feinste Haribo Gummibären</p>
                         <p>Nettogewicht 600g</p>
+                        <button class="item-infoButton" onclick="expand(this.parentElement.parentElement)">info</button>
                     </div>
                 </div>
                 <div class="item-div">
@@ -32,4 +36,5 @@
             </div>
         </div>  
     </body>
+    <script src="/js/expand.js"></script>
 </html>

@@ -7,6 +7,23 @@
     display: grid;
     grid-template-columns: 30% 30% 30%;
     grid-gap: 10px;
+    position: static;
+}
+
+.expand{
+    z-index: 1;
+    position: fixed !important;
+    height: 80% !important;
+    width: 80% !important;
+    top: 10%;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+}
+
+
+.transition-all{
+    transition: all 1000ms;
 }
 
 .item-div{
@@ -14,22 +31,75 @@
     height: auto;
     border-radius: 10px;
     overflow: hidden;
-    background-repeat: none;
+    background: #efefef;
     position: relative;
+    text-align: center;
 }
 
-.item-div:hover .item-image {
+@keyframes setIndex {
+    1%{
+        z-index: 2
+    }
+    99%{
+        z-index: 2;
+    }
+}
+
+.expand .item-imageContainer:hover .item-image{
+    animation-duration: 1s;
+    animation-name: setIndex;
+    z-index: 2
+}
+.expand .item-image{
+    width: auto;
+    height: 100%;
+}
+.item-div:hover:not(.expand) .item-image {
     filter: brightness(50%);
 }
 .item-image {
+    position: relative;
+    top: 0;
     width: 100%;
     height: auto;
     filter: brightness(100%);
-    transition: filter 500ms;
+    transition: all 1000ms;
 }
 
-.item-div:hover .item-description {
+.expand .item-imageContainer:hover{
+    height: 100%;
+}
+.expand .item-imageContainer{
     height: 50%;
+}
+.item-imageContainer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: all 1000ms;
+    position: static;
+}
+
+.expand .item-closeButton{
+    display: block;
+}
+
+.item-closeButton{
+    border: 2px solid #333333;
+    border-radius: 50%;
+    color: #333333;
+    background-color: white;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    transition: all 500ms;
+    display: none;
+    z-index: 3;
+}
+
+.item-div:hover .item-description, .expand .item-description {
+    height: 50%;
+    border-radius: 30px 30px 0 0;
 }
 .item-description {
     width: 100%;
@@ -38,13 +108,18 @@
     height: 0;
     overflow: hidden;
     background-color: white;
-    border-radius: 30px 30px 0 0;
-    transition: height 500ms;
+    border-radius: 0 0 0 0;
+    transition: border-radius 1000ms, height 500ms;
     text-align: center;
 }
-.item-description:first-child
 
-.item-div:hover .item-title {
+.item-description .bold{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+.item-div:hover .item-title, .expand .item-title {
     top: 0;
     left: 0;
     width: 100%;
@@ -52,27 +127,41 @@
     color: white;
 }
 .item-title {
+    transition: all 500ms;
     position: absolute;
     left: 25%;
     width: 45%;
-    height: 10%;
-    top: 50%;
+    height: fit-content;
+    top: 45%;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 5px;
     color: rgb(200, 200, 200);
+    padding: 2px;
 
-    transition: all 500ms;
-
-    font-size: 20px;
+    font-size: 1.5em;
 
     display: flex;
     justify-content: center; /* align horizontal */
     align-items: center; /* align vertical */
+    
+}
+
+.expand .item-infoButton{
+    display: none;
+}
+
+.item-infoButton{
+    border: none;
+    background-color: #eeeeee;
+    font-size: 1.2em;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
 }
 
 * {
-    font: 400 13.3333px Arial;
+    font: 400 1em Arial;
 }
 
 i {
@@ -81,25 +170,29 @@ i {
 
 h1 {
     text-align: center;
-    font-size: 25px
+    font-size: 2em;
 }
 
 h2 {
     text-align: left;
-    font-size: 20px;
+    font-size: 1.5em;
     margin: 10px;
     color: var(--blue);
 }
 
+
 .content {
-    padding: 30px 10%;
+    padding: 30px 0;
+    min-height: 80vh;
+    width: 80%;
+    margin: 0 auto
 }
 
 pre.code{
     display: block;
     font-family: "Lucida Console", Monaco, monospace !important;
     text-align: left;
-    font-size: 14px;
+    font-size: 1.1em;
     border: 2px var(--gray) solid;
     border-radius: 5px;
     padding: 10px;
@@ -110,7 +203,7 @@ pre.code{
 }
 
 p {
-    font-size: 15px;
+    font-size: 1.2em;
     width: 75%;
     text-align: center;
     margin-left: auto;
@@ -126,7 +219,7 @@ p.subtext {
     margin-left: 8%;
     margin-top: 4px;
     font-style: italic;
-    font-size: 14px;
+    font-size: 1.1em;
     text-align: left;
 }
 

@@ -8,6 +8,6 @@
 	<link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
 </head>
 <body>
-	<?php include("../source/navbar.html") ?>
+	<?php include("source/navbar.html") ?>
 </body>
 </html>
