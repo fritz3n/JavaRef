@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" media="screen" href="style.css">
     </head>
     <body>
-        <?php include("../../source/navbar.html") ?>
+        <?php include("../../../source/navbar.html") ?>
         <div class="content">
             <div class="item-container">
                 <div class="item-div">
