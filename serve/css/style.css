@@ -3,6 +3,12 @@
     --blue: #008bcc;
 }
 
+@media (hover: none){
+    .item-container{
+        grid-template-columns: 100% !important;
+    }
+}
+
 .item-container{
     display: grid;
     grid-template-columns: 30% 30% 30%;
@@ -34,7 +40,6 @@
     background: #efefef;
     position: relative;
     text-align: center;
-    z-index: 0;
 }
 
 @keyframes setIndex {

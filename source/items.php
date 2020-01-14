@@ -32,14 +32,20 @@ function getMainImagePath($item){
     }
     return $image;
 }
-
-function getAllImagesPath($item){
+/**
+ * @param SimpleXmlElement $item
+ */
+function getAllImagesPaths($item){
     global $missing_image_path;
 
-    $image = "/images";
-    if(isset($item->main_image)){
-        $image += $item->main_image; 
-    }elseif(isset($item->images)){
+
+    $images = array();
+
+    if(isset($item->include_main_image) && $item->include_main_image == true && isset($item->main_image)){
+        array_push($images, (string)$item->main_image
+    }
+    
+    if(isset($item->images)){
         if(isset($item->images[0])){
             $image += $item->images[0];
         }else{

@@ -9,9 +9,13 @@
         <link rel="stylesheet" type="text/css" media="screen" href="style.css">
     </head>
     <body>
-        <?php include("../../../source/navbar.html") ?>
+        <?php include("../source/navbar.html") ?>
         <div class="content">
-            <div class="item-container">
+            <?php
+
+            
+
+            echo '<div class="item-container">
                 <div class="item-div">
                     <div class="item-imageContainer">
                         <img class="item-image" src="/images/Gummibaeren/Haribo/haribo1.jpg" />
@@ -24,16 +28,8 @@
                         <button class="item-infoButton" onclick="expand(this.parentElement.parentElement)">info</button>
                     </div>
                 </div>
-                <div class="item-div">
-                    Test
-                </div>
-                <div class="item-div">
-                    Test
-                </div>
-                <div class="item-div">
-                    Test
-                </div>
-            </div>
+            </div>';
+            ?>
         </div>  
     </body>
     <script src="/js/expand.js"></script>
