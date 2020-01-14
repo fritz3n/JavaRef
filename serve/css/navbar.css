@@ -38,7 +38,7 @@ body {
 }
 
 .navcontainer {
-    width: min-content;
+    width: max-content;
     height: 100%;
     margin: 0 auto;
     padding-top: 10px;
