@@ -10,6 +10,8 @@ async function expand(element) {
     elemRect = element.getBoundingClientRect();
 
     element.setAttribute("size", JSON.stringify(elemRect));
+    
+    element.style.zIndex = 1;
 
     element.classList.remove('transition-all');
     element.style.width = element.clientWidth + "px";
@@ -34,6 +36,8 @@ async function contract(element) {
     elemRect = JSON.parse(element.getAttribute("size"));
     
     var bodyRect = document.body.getBoundingClientRect();
+
+    element.style.zIndex = 1;
 
     element.style.width = elemRect.width + "px";
     element.style.height = elemRect.height + "px";
