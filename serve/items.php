@@ -11,24 +11,24 @@
     <body>
         <?php include("../source/navbar.html") ?>
         <div class="content">
+            <iframe id="item-frame"></iframe>
             <?php
-
-            
-
-            echo '<div class="item-container">
-                <div class="item-div">
-                    <div class="item-imageContainer">
-                        <img class="item-image" src="/images/Gummibaeren/Haribo/haribo1.jpg" />
+            include("../source/items.php");
+            foreach(getItems()->item as $item){
+                echo '<div class="item-container">
+                    <div class="item-div">
+                        <div class="item-imageContainer">
+                            <img class="item-image" src="'.getMainImagePath($item).'" />
+                        </div>
+                        <button class="item-closeButton" onclick="contract(this.parentElement)">x</button>
+                        <div class="item-title">'.getTitle($item).'</div>
+                        <div class="item-description">
+                            <p>'.getSmallDetails($item).'</p>
+                            <button class="item-infoButton" onclick=\'expand("'.((string)$item->id).'")\'>info</button>
+                        </div>
                     </div>
-                    <button class="item-closeButton" onclick="contract(this.parentElement)">x</button>
-                    <div class="item-title">Haribo 600g</div>
-                    <div class="item-description">
-                        <p class="bold">Feinste Haribo Gummibären</p>
-                        <p>Nettogewicht 600g</p>
-                        <button class="item-infoButton" onclick="expand(this.parentElement.parentElement)">info</button>
-                    </div>
-                </div>
-            </div>';
+                </div>';
+            }
             ?>
         </div>  
     </body>

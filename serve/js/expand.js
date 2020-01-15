@@ -4,8 +4,12 @@
  */
 
 async function expand(element) {
-
-
+    iframe = document.getElementById("item-frame");
+    iframe.src = "/item.php?iframe=1&item=" + element;
+    iframe.onload= function() {
+        iframe.classList.add("expand");
+    };
+    /*
     var bodyRect = document.body.getBoundingClientRect(),
     elemRect = element.getBoundingClientRect();
 
@@ -24,7 +28,7 @@ async function expand(element) {
     element.classList.add('transition-all');
     await new Promise(r => setTimeout(r, 100));
     element.style = null;
-    element.classList.add('expand');
+    element.classList.add('expand');*/
 }
 
 /**

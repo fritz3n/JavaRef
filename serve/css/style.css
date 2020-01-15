@@ -229,36 +229,15 @@ p.subtext {
     text-align: left;
 }
 
-span.kw {
-    font-style: italic;
-    font-size: inherit;
-    color: #cf7900;
+#item-frame {
+    position: absolute;
+    width: 90vw;
+    height: 90%;
+    top: -100%;
+    left: 5%;
+    transition: top 500ms;
 }
 
-pre.code span.kw {
-    color: #ff7300;
-}
-
-span.kw.blue{
-    color: var(--blue);
-}
-
-pre.code span.kw.blue{
-    color: #038cfc;
-}
-
-span.kw.red{
-    color: #cf0000;
-}
-
-pre.code span.kw.red{
-    color: #ff0000;
-}
-
-span.kw.purple{
-    color: #c800cf;
-}
-
-pre.code span.kw.purple{
-    color: #f700ff;
+#item-frame.expand{
+    top: 5%;
 }
