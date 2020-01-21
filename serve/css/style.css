@@ -236,8 +236,10 @@ p.subtext {
     top: -100%;
     left: 5%;
     transition: top 500ms;
+    border: none;
+    border-radius: 10px;
 }
 
 #item-frame.expand{
-    top: 5%;
+    top: 10%;
 }

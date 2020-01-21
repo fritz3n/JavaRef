@@ -1,3 +1,19 @@
+<?php
+    include("../source/items.php");
+
+    if(!isset($_GET["item"])){
+        header('Location: /items.php');
+        exit;
+    }
+
+    $item = getItemById($_GET["item"]);
+    if($item === false){
+        header('Location: /items.php');
+        exit;
+    }
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,34 +26,20 @@
     <body>
         <?php if(!isset($_GET["iframe"])){include("../source/navbar.html");} ?>
         <div class="content">
-            <?php
-            include("../source/items.php");
-
-            if(!isset($_GET["item"])){
-                header('Location: /items.php');
-                exit;
-            }
             
-            $item = getItemById($_GET["item"]);
-            if($item === false){
-                header('Location: /items.php');
-                exit;
-            }
-
-            echo '
-                <div class="item-div">
-                    <div class="item-imageContainer">
-                        <img class="item-image" src="'.getMainImagePath($item).'" />
-                    </div>
-                    <button class="item-closeButton" onclick="contract(this.parentElement)">x</button>
-                    <div class="item-title">'.getTitle($item).'</div>
+            <div class="item-div">
+                <div class="item-imageContainer">
+                    <img class="item-image" src="<?=getMainImagePath($item)?>" />
+                </div>
+                <button class="item-closeButton" onclick="window.top.postMessage('close', '*')">x</button>
+                <div class="item-textContainer">
+                    <div class="item-title"><?=getTitle($item)?></div>
                     <div class="item-description">
-                        <p>'.getSmallDetails($item).'</p>
-                        <button class="item-infoButton" onclick="expand(this.parentElement.parentElement)">info</button>
+                        <p><?=getSmallDetails($item)?></p>
                     </div>
                 </div>
-            ';
-            ?>
+            </div>
+
         </div>  
     </body>
     <script src="/js/expand.js"></script>

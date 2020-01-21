@@ -7,3 +7,53 @@ body{
     background-color: #252525;
     opacity: 0.5;
 }
+
+.item-div {
+    height: 100vh;
+    width: 100%;
+}
+
+.item-imageContainer {
+    height: 30%;
+    width: 100%;
+    transition: height 200ms;
+}
+
+.item-imageContainer:hover {
+    height: 70%;
+}
+
+.item-image {
+    height: 100%;
+    width: auto;
+}
+
+.item-closeButton{
+    border: 2px solid #333333;
+    border-radius: 50%;
+    color: #333333;
+    background-color: white;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    transition: all 500ms;
+    z-index: 3;
+}
+
+.item-textContainer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70%;
+    
+    transition: height 200ms;
+
+    border: none;
+    border-radius: 15px 15px 0 0;
+
+    background-color: #cccccc;
+}
+
+.item-imageContainer:hover ~ .item-textContainer {
+    height: 30%;
+}

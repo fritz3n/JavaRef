@@ -70,6 +70,10 @@ function getAllImagesPaths($item){
     return $images;
 }
 
+/**
+ * Returns a small description of the item.
+ * @param SimpleXmlElement $item
+ */
 function getSmallDetails($item){
     if(isset($item->small_detail))
         return $item->small_detail;
@@ -79,11 +83,15 @@ function getSmallDetails($item){
         return "NO DESCRIPTION AVAILABLE";
 }
 
+/**
+ * Returns a large description of the item.
+ * @param SimpleXmlElement $item
+ */
 function getLargeDetails($item){
     if(isset($item->large_detail))
-        return $item->large_detail;
+        return (string)$item->large_detail;
     elseif(isset($item->small_detail))
-        return $item->small_detail;
+        return (string)$item->small_detail;
     else 
         return "NO DESCRIPTION AVAILABLE";
 }

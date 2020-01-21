@@ -1,8 +1,15 @@
+
+window.onmessage = function(e){
+    if (e.data == 'close') {
+        contract();
+    }
+};
+
+
 /**
  * 
  * @param {HTMLElement} element 
  */
-
 async function expand(element) {
     iframe = document.getElementById("item-frame");
     iframe.src = "/item.php?iframe=1&item=" + element;
@@ -31,11 +38,15 @@ async function expand(element) {
     element.classList.add('expand');*/
 }
 
-/**
- * 
- * @param {HTMLElement} element 
- */
-async function contract(element) {
+async function contract() {
+
+    /**@type {HTMLElement} */
+    var iframe = document.getElementById("item-frame");
+    
+    iframe.style.zIndex = 10;
+    iframe.classList.remove("expand");
+
+    /*
 
     elemRect = JSON.parse(element.getAttribute("size"));
     
@@ -52,4 +63,5 @@ async function contract(element) {
     element.classList.remove('expand');
     await new Promise(r => setTimeout(r, 1000));
     element.style = null;
+    */
 }
