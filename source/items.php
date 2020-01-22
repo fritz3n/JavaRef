@@ -47,7 +47,7 @@ function getMainImagePath($item){
 /**
  * @param SimpleXmlElement $item
  */
-function getAllImagesPaths($item){
+function getAllImagePaths($item){
     global $missing_image_path;
 
 

@@ -18,7 +18,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Wool Street: Joints</title>
+        <title>Wool Street: <?=getTitle($item)?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" media="screen" href="/css/navbar.css">
         <link rel="stylesheet" type="text/css" media="screen" href="/css/item.css">
@@ -29,7 +29,11 @@
             
             <div class="item-div">
                 <div class="item-imageContainer">
-                    <img class="item-image" src="<?=getMainImagePath($item)?>" />
+                    <?php
+                        foreach(getAllImagePaths($item) as $key => $image){
+                            echo "<img class='item-image' src='$image' alt='Item image number $key'>";
+                        }
+                    ?>
                 </div>
                 <button class="item-closeButton" onclick="window.top.postMessage('close', '*')">x</button>
                 <div class="item-textContainer">

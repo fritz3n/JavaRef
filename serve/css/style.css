@@ -9,6 +9,10 @@
     }
 }
 
+* {
+    font: 400 1em Arial;
+}
+
 .item-container{
     display: grid;
     grid-template-columns: 30% 30% 30%;
@@ -166,9 +170,7 @@
     right: 5%;
 }
 
-* {
-    font: 400 1em Arial;
-}
+
 
 i {
     font-style: italic !important;
