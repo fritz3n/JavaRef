@@ -5,16 +5,33 @@ window.onmessage = function(e){
     }
 };
 
+/**
+ * 
+ * @param {HTMLElement} element 
+ * @returns {boolean}
+ */
+function isNavbarChild(element){
+    if(element.classList.contains("navbar"))
+        return true;
+    if(element.parentElement.classList.contains("navbar"))
+        return true;
+    if(element.parentElement.tagName == "HTML")
+        return false;
+    
+    return isNavbarChild(element.parentElement);
+}
 
 /**
  * 
  * @param {HTMLElement} element 
  */
-async function expand(element) {
+async function expand(item) {
     iframe = document.getElementById("item-frame");
-    iframe.src = "/item.php?iframe=1&item=" + element;
+    iframe.src = "/item.php?iframe=1&item=" + item;
+    iframe.style.zIndex = 10;
     iframe.onload= function() {
         iframe.classList.add("expand");
+        iframe.style.zIndex = 1;
     };
     /*
     var bodyRect = document.body.getBoundingClientRect(),
@@ -36,6 +53,17 @@ async function expand(element) {
     await new Promise(r => setTimeout(r, 100));
     element.style = null;
     element.classList.add('expand');*/
+}
+
+window.onclick = contractMaybe;
+
+/**
+ * 
+ * @param {MouseEvent} event 
+ */
+function contractMaybe(event){
+    if(!isNavbarChild(event.target))
+        contract();
 }
 
 async function contract() {

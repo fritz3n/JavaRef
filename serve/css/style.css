@@ -240,6 +240,7 @@ p.subtext {
     transition: top 500ms;
     border: none;
     border-radius: 10px;
+    
 }
 
 #item-frame.expand{

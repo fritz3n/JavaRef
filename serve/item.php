@@ -13,7 +13,6 @@
     }
 
 ?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -28,7 +27,7 @@
         <div class="content">
             
             <div class="item-div">
-                <div class="item-imageContainer">
+                <div class="item-imageContainer" id="horizontalScroll">
                     <?php
                         foreach(getAllImagePaths($item) as $key => $image){
                             echo "<img class='item-image' src='$image' alt='Item image number $key'>";
@@ -47,4 +46,26 @@
         </div>  
     </body>
     <script src="/js/expand.js"></script>
+    <script>
+        function isHover(e) {
+            return (e.parentElement.querySelector(':hover') === e);
+        }
+        (function() {
+            function scrollHorizontally(e) {
+                e = window.event || e;
+                var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+                document.getElementById('horizontalScroll').scrollLeft -= (delta*40 * (isHover(document.getElementById('horizontalScroll')) ? 10 : 1)); // Multiplied by 40
+                e.preventDefault();
+            }
+            if (document.getElementById('horizontalScroll').addEventListener) {
+                // IE9, Chrome, Safari, Opera
+                document.getElementById('horizontalScroll').addEventListener("mousewheel", scrollHorizontally, false);
+                // Firefox
+                document.getElementById('horizontalScroll').addEventListener("DOMMouseScroll", scrollHorizontally, false);
+            } else {
+                // IE 6/7/8
+                document.getElementById('horizontalScroll').attachEvent("onmousewheel", scrollHorizontally);
+            }
+        })();
+    </script>
 </html>

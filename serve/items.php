@@ -8,7 +8,7 @@
         <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css">
         <link rel="stylesheet" type="text/css" media="screen" href="style.css">
     </head>
-    <body>
+    <body onclick="contractMaybe">
         <?php include("../source/navbar.html") ?>
         <div class="content">
             <div class="item-container">        
