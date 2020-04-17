@@ -7,7 +7,7 @@
         <main_image>Gummibaeren/Haribo/haribo1.jpg</main_image>
         <include_main_image>1</include_main_image>
         <images> </images>
-        <category>gummibären/haribo</category>
+        <category>/gummibären/haribo</category>
     </item>
     <item>
         <id>haribo2</id>
@@ -17,6 +17,6 @@
         <main_image>Gummibaeren/Haribo/haribo1.jpg</main_image>
         <include_main_image>1</include_main_image>
         <images><image>Gummibaeren/Haribo/haribo1.jpg</image> <image>Gummibaeren/Haribo/haribo1.jpg</image> </images>
-        <category>gummibären/haribo</category>
+        <category>/gummibären/haribo</category>
     </item>
 </items>

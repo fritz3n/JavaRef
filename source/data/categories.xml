@@ -1,3 +1,26 @@
 <categories>
-
+    <category>
+        <name>All</name>
+        <path></path>
+    </category>
+    <category>
+        <name>Gummibären</name>
+        <path>/gummibären</path>
+    </category>
+    <category>
+        <name>Haribo</name>
+        <path>/gummibären/haribo</path>
+    </category>
+    <category>
+        <name>Haribo2</name>
+        <path>/gummibären/haribo2</path>
+    </category>
+    <category>
+        <name>Haribo Test</name>
+        <path>/gummibären/haribo/test</path>
+    </category>
+<category>
+        <name>Haribo Test2</name>
+        <path>/gummibären/haribo/test2</path>
+    </category>
 </categories>

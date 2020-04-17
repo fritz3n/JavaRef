@@ -1,26 +1,16 @@
-<!doctype html>
-<html lang="de">
-	<head>
-		<title>Datenschutzerklaerung</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" media="screen" href="/css/navbar.css">
-		<link rel="stylesheet" type="text/css" media="screen" href="/css/style.css">
-		<style>
-			body {
-			font-family: Arial, Helvetica, sans-serif;
-			}
-			table, th, td {
-			border: 1px solid red;
-			padding: 3px;
-			}
-    </style>
-	</head>
-	<body style="background-color:#2E2E2E">
-		
-		<?php include("../../source/navbar.html") ?>
-
-		<font color = white><h1>Datenschutzerklärung</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Datenschutz</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/navbar.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/datenschutz.css">
+    </head>
+    <body>
+        <?php include("../../source/navbar.php") ?>
+        <div class="content">
+		<h1>Datenschutzerklärung</h1>
 		<p>Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:</p>
 		<p>Finn Blumenstock</p>
 		<h2>Ihre Betroffenenrechte</h2>
@@ -91,12 +81,8 @@
 		<p>Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen, z.B. bei der Einführung neuer Services. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.</p>
 		<h2>Fragen an den Datenschutzbeauftragten</h2>
 		<p>Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail oder wenden Sie sich direkt an die für den Datenschutz verantwortliche Person in unserer Organisation</p></front>
-		<footer>
-			<div id="leiste"></div>
-			<a href="impressum_ger.html">impressum</a>
-			<a href="#" title="translates the page to english">go english</a>
-			<a href="credits_ger.html">credits</a>
-			</div>
-		</footer>
-	</body>
-<html>
+		</div>  
+        <?php include("../../source/footer.html")?>
+    </body>
+    <script src="/js/navbar.js"></script>
+</html>

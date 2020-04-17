@@ -53,6 +53,7 @@ body{
     left: 10px;
     transition: all 500ms;
     z-index: 3;
+    cursor: pointer;
 }
 
 .item-textContainer {
@@ -76,11 +77,34 @@ body{
 .item-title {
     font-size: 1.5em;
     font-weight: bold;
-    padding: 10px 0 0 10%;
+    padding: 10px 10%;
+    text-align: center;
 
 }
 .item-description {
     padding: 5px 5%;
+    text-align: center;
+}
+
+.item-buybutton {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    text-emphasis: none;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    background-color: #008bcc;
+    cursor: pointer;
+    
+    transition: background-color 200ms;
+}
+
+.item-buybutton:hover{
+    background-color: #005d88;
 }
 
 /* width */

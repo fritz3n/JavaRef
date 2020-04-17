@@ -3,12 +3,20 @@
 $item_path = "/data/items.xml";
 $missing_image_path = "missing.png";
 
+
+
 /**
  * @return SimpleXmlElement
  */
 function getItems(){
     global $item_path;
     return simplexml_load_file(dirname(__FILE__).$item_path);
+}
+
+function getItemsByPath($path){
+    if(substr($path, -1) !== "/")
+        $path .= "/";
+    return getItems()->xpath("/items/item[starts-with(category,'" . $path ."')]");
 }
 
 function getItemById($id){

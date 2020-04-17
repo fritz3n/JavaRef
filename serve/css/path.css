@@ -1,0 +1,39 @@
+.path-container {
+    height: fit-content;
+    width: fit-content;
+    margin: none;
+    margin-bottom: 20px;
+
+    border: 1px black solid;
+    border-radius: 15px;
+    overflow: hidden;
+    
+}
+
+.path {
+    font-size: 1.5em;
+
+    background-origin: content-box;
+
+    background: rgb(255,255,255); /* compatabillity */
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(181,181,181,1) 50%);
+    background-size: 100% 200%;
+    background-position: 0% 0%;
+
+    display: inline-block;
+
+    border: none;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+
+    transition: background-position 200ms;
+}
+
+.path:not(first-child){
+    border-right: 1px black solid;
+}
+
+.path:hover {
+    background-position: 0% 50%;
+}

@@ -1,0 +1,42 @@
+#banner {
+    width: 100vw;
+    top: -800px;
+    position: relative;
+}
+
+.banner-container {
+    position: relative;
+    height: 40vh;
+    overflow: hidden;
+}
+
+.banner-container:after {
+    content: '\A';
+    position: absolute;
+    width: 100%; 
+    height:100%;
+    top:0; 
+    left:0;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 20%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 80%, rgba(0,0,0,1) 100%);
+    z-index: 1;
+}
+
+.logo-container{
+    content: '\A';
+    position: absolute;
+    width: 50%; 
+    height:50%;
+    max-height: 20vh;
+    top:25%; 
+    left:25%;
+    text-align: center;
+    z-index: 2;
+}
+
+.banner-logo {
+    height: 100%;
+    max-height: auto;
+    max-width: 100%;
+    width: auto;
+}

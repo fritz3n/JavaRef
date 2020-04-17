@@ -34,13 +34,14 @@
                         }
                     ?>
                 </div>
-                <button class="item-closeButton" onclick="window.top.postMessage('close', '*')">x</button>
+                <button class="item-closeButton" onclick="window.top.postMessage({type:'close'}, '*')">x</button>
                 <div class="item-textContainer">
                     <div class="item-title"><?=getTitle($item)?></div>
                     <div class="item-description">
                         <p><?=getSmallDetails($item)?></p>
                     </div>
                 </div>
+                <button class="item-buybutton" onclick="window.top.postMessage({type:'address', item:'<?php echo $_GET["item"]; ?>'}, '*')">Kaufen</button>
             </div>
 
         </div>  
@@ -54,7 +55,7 @@
             function scrollHorizontally(e) {
                 e = window.event || e;
                 var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-                document.getElementById('horizontalScroll').scrollLeft -= (delta*40 * (isHover(document.getElementById('horizontalScroll')) ? 10 : 1)); // Multiplied by 40
+                document.getElementById('horizontalScroll').scrollLeft -= (delta*40 * (isHover(document.getElementById('horizontalScroll')) ? 10 : 1));
                 e.preventDefault();
             }
             if (document.getElementById('horizontalScroll').addEventListener) {
