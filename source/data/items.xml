@@ -1,22 +1,93 @@
 <items>
     <item>
-        <id>haribo1</id>
+        <id>Haribo</id>
         <title>Haribo 500g</title>
         <small_detail>500g feinste Haribo Gummibären</small_detail>
         <large_detail>Diese 500g Tüte stammt original von Haribo und ist geil</large_detail>
-        <main_image>Gummibaeren/Haribo/haribo1.jpg</main_image>
+        <main_image>Gummibaeren/h.jpg</main_image>
         <include_main_image>1</include_main_image>
         <images> </images>
-        <category>/gummibären/haribo</category>
+        <category>/süß/süß/Gummibären/Haribo/</category>
     </item>
     <item>
-        <id>haribo2</id>
-        <title>Haribo 420g</title>
-        <small_detail>smoke weed every day</small_detail>
-        <large_detail>Diese 500g Tüte stammt original von Haribo und ist geil</large_detail>
-        <main_image>Gummibaeren/Haribo/haribo1.jpg</main_image>
+        <id>MilkaAlpenmilchSchokoladeErdbeerJoghurt100g</id>
+        <title>Milka Erdbeer 100g</title>
+        <small_detail>Milka mit Erdbeer geschmack in der 100g Packung</small_detail>
+        <large_detail>Diese 100g Packung stammt original von Milka und ist nice</large_detail>
+        <main_image>Milka/m_e.jpg</main_image>
         <include_main_image>1</include_main_image>
-        <images><image>Gummibaeren/Haribo/haribo1.jpg</image> <image>Gummibaeren/Haribo/haribo1.jpg</image> </images>
-        <category>/gummibären/haribo</category>
+        <images></images>
+        <category>/süß/süß/Schokolade/Milka/</category>
     </item>
+    <item> 
+    <id>MilkaAlpenmilchSchokoladeTUCCracker87g</id>
+    <title>Milka Tuc Cracker 87g</title>
+    <small_detail> Milka mit TUC und Cracker geschmack in der 87g Packung</small_detail>
+    <large_detail> Diese 87g Packung stammt original von Milka und ist nice </large_detail>
+    <main_image>Milka/m_t2.png</main_image>
+     <include_main_image>1</include_main_image>
+        <images></images>
+        <category>/süß/süß/Schokolade/Milka/</category>
+    </item>
+    <item> 
+    <id>AbsolutVodka</id>
+    <title>Absolut Vodka</title>
+    <small_detail>Eine 0,7 liter Flasche guter Vodka</small_detail>
+    <large_detail>Der 1979 in New York lancierte Absolut Vodka ist weltweit die drittgrößte Spirituosenmarke. Zur Herstellung des Vodkas wird südschwedischer Winterweizen und reines Quellwasser der hauseigenen Quelle verwendet, ohne den Zusatz von weiterem Zucker. Der Geschmack ist rein, komplex und vollmundig und gleichzeitig weich und geschmeidig.</large_detail>
+    <main_image>Trinken/v.jpg</main_image>
+     <include_main_image>1</include_main_image>
+        <images></images>
+        <category>/Trinken/anderes/Alk/</category>
+    </item>
+    <item> 
+    <id>ChipsfrischPaprika</id>
+    <title>Funny-frisch Chipsfrisch ungarisch</title>
+    <small_detail>Chips ungarische Art in der 175g Packung</small_detail>
+    <large_detail>Diese 175g Packung stammt original von Funny-frisch und ist richtig nice</large_detail>
+    <main_image>Chips/c_u.jpg</main_image>
+     <include_main_image>1</include_main_image>
+        <images></images>
+        <category>/süß/salzig/Chips/Funny-frisch/</category>
+    </item>
+    <item> 
+    <id>MilkaAlpenmilchSchokolademitChipsAhoy-Keksstückchen</id>
+    <title>Milka Schokolade mit Keksstückchen 100g</title>
+    <small_detail>Milka mit Keksstückchen in der 100g Packung</small_detail>
+    <large_detail>Diese 100g Packung stammt original von Milka und ist nice</large_detail>
+    <main_image>Milka/FUCK.jpg</main_image>
+     <include_main_image>1</include_main_image>
+        <images></images>
+        <category>/süß/süß/Schokolade/Milka/</category>
+    </item>
+    <item> 
+    <id>Wasser</id>
+    <title>Wasser</title>
+    <small_detail>0,5 liter Wasserflasche</small_detail>
+    <large_detail>Diese 0,5 liter Wasserflasche ist nicht gebraucht und kann spuren von Nüssen und Wasser enthalten</large_detail>
+    <main_image>Trinken/w.jpg</main_image>
+     <include_main_image>1</include_main_image>
+        <images></images>
+        <category>/Trinken/anderes/Wasser/</category>
+    </item>
+    <item> 
+    <id>LebensEssenz</id>
+    <title>Paulaner Spezi</title>
+    <small_detail>0,5 liter bestes Paulaner Spezi</small_detail>
+    <large_detail>Dieses Getränk wird ihr Leben verändern das es ein geschenk Gottes ist und das nur mit einer 0,5 liter Flasche Spezi</large_detail>
+    <main_image>Trinken/p_s.png</main_image>
+     <include_main_image>1</include_main_image>
+        <images></images>
+        <category>/Trinken/anderes/Paulaner/</category>
+    </item>
+    <item> 
+    <id>MilkaAlpenmilchSchokolade</id>
+    <title>Milka Alpenmilch Schokolade 100g</title>
+    <small_detail>Milka mit Alpenmilch in der 100g Packung</small_detail>
+    <large_detail>Diese 100g Packung stammt original von Milka und ist nice</large_detail>
+    <main_image>Milka/m2.jpg</main_image>
+     <include_main_image>1</include_main_image>
+        <images></images>
+        <category>/süß/süß/Schokolade/Milka/</category>
+    </item>
+
 </items>

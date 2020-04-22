@@ -4,9 +4,11 @@
         <meta charset="utf-8">
         <title>ITEMS</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="/favicon.png">
         <link rel="stylesheet" type="text/css" media="screen" href="/css/navbar.css">
         <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css">
         <link rel="stylesheet" type="text/css" media="screen" href="/css/path.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/footer.css">
     </head>
     <body>
         <?php include("../source/navbar.php") ?>
@@ -69,7 +71,7 @@
         <?php 
             if(isset($_GET["item"])){
                 $item = filter_var($_GET["item"], FILTER_SANITIZE_STRING);
-                echo "expand('".$item."');";
+                echo "expand('".$item."', false);";
             }
         ?>
     </script>

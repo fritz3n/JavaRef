@@ -1,0 +1,17 @@
+.footer {
+    height: 50px;
+    width: 100%;
+    background-color: grey;
+    color: white;
+    text-align: center;
+}
+.footer a {
+    color: white;
+    font-size: 1em;
+    margin-top: auto;
+    margin-bottom: auto;
+    line-height: 50px;
+}
+.all {
+    min-height: calc(100vh - 50px);
+}

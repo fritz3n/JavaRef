@@ -1,23 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<titel>Impressum</titel>
-	</head>
-	<body>
+    <head>
+        <meta charset="utf-8">
+        <title>Impressum</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="/favicon.png">
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/navbar.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/datenschutz.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/footer.css">
+    </head>
+    <body>
+        <?php include("../../source/navbar.php") ?>
+        <div class="content">
 		<h1>Impressum</h1>
 		<h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
-		<p>Philipp Mangold<br />
+		<p class="center">Philipp Mangold<br />
 		Bergstra&szlig;e 9<br />
 		74420 Oberrot-Hausem</p>
 
 		<h2>Kontakt</h2>
-		<p>Telefon: 07977253<br />
+		<p class="center">Telefon: 07977253<br />
 		E-Mail: mangold.p@gmx.de</p>
 
 		<h2>Streitschlichtung</h2>
 		<p>Die Europ&auml;ische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: 
 		<a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr</a>.<br /> 
-		Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
+		Unsere E-Mail-Adresse finden Sie oben im Impressum.
 
 		Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
 
@@ -42,5 +50,8 @@
 		<p>Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. 
 		Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. 
 		Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
-	</body>
-</html>	
+		</div>  
+        <?php include("../../source/footer.html")?>
+    </body>
+    <script src="/js/navbar.js"></script>
+</html>

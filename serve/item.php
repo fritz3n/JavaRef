@@ -19,6 +19,7 @@
         <meta charset="utf-8">
         <title>Wool Street: <?=getTitle($item)?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="/favicon.png">   
         <link rel="stylesheet" type="text/css" media="screen" href="/css/navbar.css">
         <link rel="stylesheet" type="text/css" media="screen" href="/css/item.css">
     </head>

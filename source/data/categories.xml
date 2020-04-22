@@ -2,25 +2,41 @@
     <category>
         <name>All</name>
         <path></path>
+    </category>    
+    <category>
+        <name>Süßigkeiten</name>
+        <path>/süß</path>
+    </category>
+    <category>
+        <name>Süß</name>
+        <path>/süß/süß</path>
+    </category>
+    <category>
+        <name>Salzig</name>
+        <path>/süß/salzig</path>
     </category>
     <category>
         <name>Gummibären</name>
-        <path>/gummibären</path>
+        <path>/süß/süß/Gummibären</path>
     </category>
     <category>
-        <name>Haribo</name>
-        <path>/gummibären/haribo</path>
+        <name>Trinken</name>
+        <path>/Trinken</path>
     </category>
     <category>
-        <name>Haribo2</name>
-        <path>/gummibären/haribo2</path>
+        <name>Alk</name>
+        <path>/Trinken/Alk</path>
     </category>
     <category>
-        <name>Haribo Test</name>
-        <path>/gummibären/haribo/test</path>
+        <name>Anderes</name>
+        <path>/Trinken/anderes</path>
     </category>
-<category>
-        <name>Haribo Test2</name>
-        <path>/gummibären/haribo/test2</path>
+    <category>
+        <name>Chips</name>
+        <path>/süß/salzig/Chips</path>
+    </category>
+    <category>
+        <name>Schokolade</name>
+        <path>/süß/süß/Schokolade</path>
     </category>
 </categories>

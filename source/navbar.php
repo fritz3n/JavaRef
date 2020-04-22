@@ -6,7 +6,7 @@
     <div class="navdropdown">
         <div class="backgroundcontainer">
             <div class="navcontainer">
-            <a href='items.php'>Alle</a>
+            <a href='/items.php'>Alle</a>
             <?php
                 include_once(dirname(__FILE__)."/categories.php");
 
@@ -22,11 +22,11 @@
                     $level = substr_count($cat->path, "/");
 
                     if($subCats === false){
-                        echo "<a href='items.php?path=".$cat->path."'>".$cat->name."</a>";
+                        echo "<a href='/items.php?path=".$cat->path."'>".$cat->name."</a>";
                     }else{
                         echo "<div class='dropdown'>
                             <div class='droparrow-container' onclick='toggleExpandDropdown(this)'><button class='droparrow small'><img src='/images/arrow.svg' alt='dropdown arrow'/></button></div>
-                            <a class='dropbtn' href='items.php?path=".$cat->path."'>".$cat->name."</a>
+                            <a class='dropbtn' href='/items.php?path=".$cat->path."'>".$cat->name."</a>
                             <div class='dropdown-content'>";
 
                         foreach($subCats as $subCat){
